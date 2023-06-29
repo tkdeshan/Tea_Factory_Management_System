@@ -89,6 +89,7 @@
             this.groupBox1.Size = new System.Drawing.Size(782, 396);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            
             // 
             // dateTimePicker1
             // 
