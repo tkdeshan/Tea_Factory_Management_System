@@ -16,5 +16,10 @@ namespace Tea_Factory_Management_System
         {
             InitializeComponent();
         }
+
+        private void register_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
