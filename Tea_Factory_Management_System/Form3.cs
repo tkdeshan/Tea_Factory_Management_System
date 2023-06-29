@@ -112,5 +112,12 @@ namespace Tea_Factory_Management_System
 
             con.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 f1 = new Form1();
+            f1.ShowDialog();
+            this.Hide();
+        }
     }
 }

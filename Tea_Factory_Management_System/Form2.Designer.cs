@@ -49,6 +49,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +65,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnBack);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.textRegNum);
@@ -89,7 +91,6 @@
             this.groupBox1.Size = new System.Drawing.Size(782, 396);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            
             // 
             // dateTimePicker1
             // 
@@ -126,9 +127,9 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(531, 360);
+            this.btnClear.Location = new System.Drawing.Point(593, 360);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(142, 30);
+            this.btnClear.Size = new System.Drawing.Size(80, 30);
             this.btnClear.TabIndex = 14;
             this.btnClear.Text = "CLEAR";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -136,9 +137,9 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(390, 360);
+            this.btnSave.Location = new System.Drawing.Point(483, 360);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(135, 30);
+            this.btnSave.Size = new System.Drawing.Size(63, 30);
             this.btnSave.TabIndex = 13;
             this.btnSave.Text = "SAVE";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -263,6 +264,16 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Name ";
             // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(391, 360);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(63, 30);
+            this.btnBack.TabIndex = 19;
+            this.btnBack.Text = "BACK";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -303,5 +314,6 @@
         private System.Windows.Forms.TextBox textRegNum;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button btnBack;
     }
 }

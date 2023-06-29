@@ -87,5 +87,13 @@ namespace Tea_Factory_Management_System
             textMobile.Clear();
             comboArea.SelectedIndex = -1;
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Form1 f2 = new Form1();
+            f2.ShowDialog();
+            this.Hide();
+            
+        }
     }
 }

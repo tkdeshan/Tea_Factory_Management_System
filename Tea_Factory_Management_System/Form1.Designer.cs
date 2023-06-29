@@ -76,6 +76,7 @@
             this.view.TabIndex = 3;
             this.view.Text = "View Records";
             this.view.UseVisualStyleBackColor = true;
+            this.view.Click += new System.EventHandler(this.view_Click);
             // 
             // bill
             // 
@@ -86,6 +87,7 @@
             this.bill.TabIndex = 4;
             this.bill.Text = "Generate Monthly Bill";
             this.bill.UseVisualStyleBackColor = true;
+            this.bill.Click += new System.EventHandler(this.bill_Click);
             // 
             // Form1
             // 

@@ -15,6 +15,8 @@ namespace Tea_Factory_Management_System
 
         private Form2 newForm;
         private Form3 newForm1;
+        private Form4 newForm2;
+        private Form5 newForm3;
 
         public Form1()
         {
@@ -32,6 +34,20 @@ namespace Tea_Factory_Management_System
         {
             newForm1 = new Form3();
             newForm1.Show();
+            this.Hide();
+        }
+
+        private void view_Click(object sender, EventArgs e)
+        {
+            newForm2 = new Form4();
+            newForm2.Show();
+            this.Hide();
+        }
+
+        private void bill_Click(object sender, EventArgs e)
+        {
+            newForm3 = new Form5();
+            newForm3.Show();
             this.Hide();
         }
     }

@@ -31,6 +31,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.checkGood = new System.Windows.Forms.CheckBox();
+            this.checkWater = new System.Windows.Forms.CheckBox();
+            this.checkBag = new System.Windows.Forms.CheckBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.btnRecord = new System.Windows.Forms.Button();
@@ -40,9 +43,7 @@
             this.textName = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.textRegNum = new System.Windows.Forms.TextBox();
-            this.checkBag = new System.Windows.Forms.CheckBox();
-            this.checkWater = new System.Windows.Forms.CheckBox();
-            this.checkGood = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -73,6 +74,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.checkGood);
             this.groupBox2.Controls.Add(this.checkWater);
             this.groupBox2.Controls.Add(this.checkBag);
@@ -87,12 +89,43 @@
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             // 
+            // checkGood
+            // 
+            this.checkGood.AutoSize = true;
+            this.checkGood.Location = new System.Drawing.Point(337, 147);
+            this.checkGood.Name = "checkGood";
+            this.checkGood.Size = new System.Drawing.Size(97, 24);
+            this.checkGood.TabIndex = 11;
+            this.checkGood.Text = "Not Good";
+            this.checkGood.UseVisualStyleBackColor = true;
+            // 
+            // checkWater
+            // 
+            this.checkWater.AutoSize = true;
+            this.checkWater.Location = new System.Drawing.Point(177, 147);
+            this.checkWater.Name = "checkWater";
+            this.checkWater.Size = new System.Drawing.Size(71, 24);
+            this.checkWater.TabIndex = 10;
+            this.checkWater.Text = "Water";
+            this.checkWater.UseVisualStyleBackColor = true;
+            // 
+            // checkBag
+            // 
+            this.checkBag.AutoSize = true;
+            this.checkBag.Location = new System.Drawing.Point(29, 147);
+            this.checkBag.Name = "checkBag";
+            this.checkBag.Size = new System.Drawing.Size(57, 24);
+            this.checkBag.TabIndex = 9;
+            this.checkBag.Text = "Bag";
+            this.checkBag.UseVisualStyleBackColor = true;
+            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(158, 37);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(276, 26);
             this.dateTimePicker1.TabIndex = 8;
+            this.dateTimePicker1.Value = new System.DateTime(2023, 6, 30, 0, 29, 21, 0);
             // 
             // label3
             // 
@@ -105,7 +138,7 @@
             // 
             // btnRecord
             // 
-            this.btnRecord.Location = new System.Drawing.Point(595, 161);
+            this.btnRecord.Location = new System.Drawing.Point(508, 161);
             this.btnRecord.Name = "btnRecord";
             this.btnRecord.Size = new System.Drawing.Size(87, 30);
             this.btnRecord.TabIndex = 5;
@@ -117,7 +150,7 @@
             // 
             this.textQty.Location = new System.Drawing.Point(158, 92);
             this.textQty.Name = "textQty";
-            this.textQty.Size = new System.Drawing.Size(87, 26);
+            this.textQty.Size = new System.Drawing.Size(109, 26);
             this.textQty.TabIndex = 5;
             // 
             // label2
@@ -160,35 +193,15 @@
             this.textRegNum.Size = new System.Drawing.Size(120, 26);
             this.textRegNum.TabIndex = 0;
             // 
-            // checkBag
+            // button1
             // 
-            this.checkBag.AutoSize = true;
-            this.checkBag.Location = new System.Drawing.Point(542, 41);
-            this.checkBag.Name = "checkBag";
-            this.checkBag.Size = new System.Drawing.Size(57, 24);
-            this.checkBag.TabIndex = 9;
-            this.checkBag.Text = "Bag";
-            this.checkBag.UseVisualStyleBackColor = true;
-            // 
-            // checkWater
-            // 
-            this.checkWater.AutoSize = true;
-            this.checkWater.Location = new System.Drawing.Point(542, 82);
-            this.checkWater.Name = "checkWater";
-            this.checkWater.Size = new System.Drawing.Size(71, 24);
-            this.checkWater.TabIndex = 10;
-            this.checkWater.Text = "Water";
-            this.checkWater.UseVisualStyleBackColor = true;
-            // 
-            // checkGood
-            // 
-            this.checkGood.AutoSize = true;
-            this.checkGood.Location = new System.Drawing.Point(542, 121);
-            this.checkGood.Name = "checkGood";
-            this.checkGood.Size = new System.Drawing.Size(97, 24);
-            this.checkGood.TabIndex = 11;
-            this.checkGood.Text = "Not Good";
-            this.checkGood.UseVisualStyleBackColor = true;
+            this.button1.Location = new System.Drawing.Point(601, 161);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(87, 30);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Back";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form3
             // 
@@ -198,6 +211,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "Form3";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tea Details";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -225,5 +239,6 @@
         private System.Windows.Forms.CheckBox checkGood;
         private System.Windows.Forms.CheckBox checkWater;
         private System.Windows.Forms.CheckBox checkBag;
+        private System.Windows.Forms.Button button1;
     }
 }
