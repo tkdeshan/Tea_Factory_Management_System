@@ -33,7 +33,6 @@
             this.add = new System.Windows.Forms.Button();
             this.view = new System.Windows.Forms.Button();
             this.bill = new System.Windows.Forms.Button();
-            this.addItem = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -49,7 +48,7 @@
             // register
             // 
             this.register.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.register.Location = new System.Drawing.Point(291, 117);
+            this.register.Location = new System.Drawing.Point(291, 125);
             this.register.Name = "register";
             this.register.Size = new System.Drawing.Size(240, 30);
             this.register.TabIndex = 1;
@@ -60,42 +59,33 @@
             // add
             // 
             this.add.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.add.Location = new System.Drawing.Point(291, 178);
+            this.add.Location = new System.Drawing.Point(291, 212);
             this.add.Name = "add";
             this.add.Size = new System.Drawing.Size(240, 30);
             this.add.TabIndex = 2;
             this.add.Text = "Add Tea Record";
             this.add.UseVisualStyleBackColor = true;
+            this.add.Click += new System.EventHandler(this.add_Click);
             // 
             // view
             // 
             this.view.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.view.Location = new System.Drawing.Point(291, 293);
+            this.view.Location = new System.Drawing.Point(291, 286);
             this.view.Name = "view";
             this.view.Size = new System.Drawing.Size(240, 30);
             this.view.TabIndex = 3;
-            this.view.Text = "View Tea Records";
+            this.view.Text = "View Records";
             this.view.UseVisualStyleBackColor = true;
             // 
             // bill
             // 
             this.bill.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bill.Location = new System.Drawing.Point(291, 345);
+            this.bill.Location = new System.Drawing.Point(291, 362);
             this.bill.Name = "bill";
             this.bill.Size = new System.Drawing.Size(240, 30);
             this.bill.TabIndex = 4;
             this.bill.Text = "Generate Monthly Bill";
             this.bill.UseVisualStyleBackColor = true;
-            // 
-            // addItem
-            // 
-            this.addItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addItem.Location = new System.Drawing.Point(291, 235);
-            this.addItem.Name = "addItem";
-            this.addItem.Size = new System.Drawing.Size(240, 30);
-            this.addItem.TabIndex = 5;
-            this.addItem.Text = "Add Uria and Tea Leave ";
-            this.addItem.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -103,7 +93,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(837, 450);
-            this.Controls.Add(this.addItem);
             this.Controls.Add(this.bill);
             this.Controls.Add(this.view);
             this.Controls.Add(this.add);
@@ -124,7 +113,6 @@
         private System.Windows.Forms.Button add;
         private System.Windows.Forms.Button view;
         private System.Windows.Forms.Button bill;
-        private System.Windows.Forms.Button addItem;
     }
 }
 

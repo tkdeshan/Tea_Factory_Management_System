@@ -26,9 +26,10 @@ namespace Tea_Factory_Management_System
         string id;
         bool Mode = true;
         string sql;
-
+       
         private void btnSave_Click(object sender, EventArgs e)
         {
+            string regNum = textRegNum.Text;
             string name = textName.Text;
             string idNum = textID.Text;
             string gender = string.Empty;
@@ -39,22 +40,26 @@ namespace Tea_Factory_Management_System
             string address = textAddress.Text;
             string mobile = textMobile.Text;
             string area = comboArea.SelectedItem.ToString();
+            DateTime date = dateTimePicker1.Value;
 
 
             if (Mode == true)
             {
-                sql = "INSERT INTO customer (name, idNum, gender, address, mobile, area) VALUES (@name, @idNum, @gender, @address, @mobile, @area)";
+                sql = "INSERT INTO tblCustomer (regNum,name, idNum, gender, address, mobile, area, date) VALUES (@regNum, @name, @idNum, @gender, @address, @mobile, @area, @date)";
                 con.Open();
                 cmd = new SqlCommand(sql, con);
+                cmd.Parameters.AddWithValue("@regNum", regNum);
                 cmd.Parameters.AddWithValue("@name", name);
                 cmd.Parameters.AddWithValue("@idNum", idNum);
                 cmd.Parameters.AddWithValue("@gender", gender);
                 cmd.Parameters.AddWithValue("@address", address);
                 cmd.Parameters.AddWithValue("@mobile", mobile);
                 cmd.Parameters.AddWithValue("@area", area);
+                cmd.Parameters.AddWithValue("@date", date);
                 MessageBox.Show("Succsesfully Recorded!!!");
                 cmd.ExecuteNonQuery();
 
+                textRegNum.Clear();
                 textName.Clear();
                 textID.Clear();
                 radioMail.Checked = false;
@@ -70,5 +75,17 @@ namespace Tea_Factory_Management_System
             con.Close();
         
     }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            textRegNum.Clear();
+            textName.Clear();
+            textID.Clear();
+            radioMail.Checked = false;
+            radioFemail.Checked = false;
+            textAddress.Clear();
+            textMobile.Clear();
+            comboArea.SelectedIndex = -1;
+        }
     }
 }
