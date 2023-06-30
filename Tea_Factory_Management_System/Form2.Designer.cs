@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnBack = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.textRegNum = new System.Windows.Forms.TextBox();
@@ -49,7 +50,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnBack = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,6 +91,16 @@
             this.groupBox1.Size = new System.Drawing.Size(782, 396);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(391, 360);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(63, 30);
+            this.btnBack.TabIndex = 19;
+            this.btnBack.Text = "BACK";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // dateTimePicker1
             // 
@@ -137,7 +147,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(483, 360);
+            this.btnSave.Location = new System.Drawing.Point(496, 360);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(63, 30);
             this.btnSave.TabIndex = 13;
@@ -263,16 +273,6 @@
             this.label2.Size = new System.Drawing.Size(52, 18);
             this.label2.TabIndex = 0;
             this.label2.Text = "Name ";
-            // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(391, 360);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(63, 30);
-            this.btnBack.TabIndex = 19;
-            this.btnBack.Text = "BACK";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // Form2
             // 

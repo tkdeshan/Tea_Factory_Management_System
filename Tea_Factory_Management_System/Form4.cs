@@ -36,7 +36,11 @@ namespace Tea_Factory_Management_System
                 textID.Text = read[2].ToString();
                 textGender.Text = read[3].ToString();
                 textMobile.Text = read[5].ToString();
-                textDate.Text = read[7].ToString();
+
+                DateTime dateTime = (DateTime)read[7];
+                string dateOnly = dateTime.ToShortDateString();
+                textDate.Text = dateOnly;
+               
                 textAddress.Text = read[4].ToString();
                 textArea.Text = read[6].ToString();
             }
@@ -52,7 +56,10 @@ namespace Tea_Factory_Management_System
 
                 while (read.Read())
                 {
-                    dataGridView1.Rows.Add(read[1], read[2], read[3], read[4], read[5], read[6]);
+                    DateTime dateTime = (DateTime)read[1];
+                    string dateOnly = dateTime.ToShortDateString();
+                    
+                    dataGridView1.Rows.Add(dateOnly, read[2], read[3], read[4], read[5], read[6]);
                 }
                 con.Close();
 

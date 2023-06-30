@@ -31,6 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.checkGood = new System.Windows.Forms.CheckBox();
             this.checkWater = new System.Windows.Forms.CheckBox();
             this.checkBag = new System.Windows.Forms.CheckBox();
@@ -43,7 +44,6 @@
             this.textName = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.textRegNum = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -88,6 +88,16 @@
             this.groupBox2.Size = new System.Drawing.Size(707, 206);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(496, 161);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(87, 30);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Back";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // checkGood
             // 
@@ -138,7 +148,7 @@
             // 
             // btnRecord
             // 
-            this.btnRecord.Location = new System.Drawing.Point(508, 161);
+            this.btnRecord.Location = new System.Drawing.Point(600, 161);
             this.btnRecord.Name = "btnRecord";
             this.btnRecord.Size = new System.Drawing.Size(87, 30);
             this.btnRecord.TabIndex = 5;
@@ -192,16 +202,6 @@
             this.textRegNum.Name = "textRegNum";
             this.textRegNum.Size = new System.Drawing.Size(120, 26);
             this.textRegNum.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(601, 161);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 30);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Back";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form3
             // 
