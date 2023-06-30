@@ -76,6 +76,56 @@ namespace Tea_Factory_Management_System
             f1.ShowDialog();
             this.Hide();
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            string name = textName.Text;
+            string idNum = textID.Text;
+            string gender = textGender.Text;
+            string address = textAddress.Text;
+            string mobile = textMobile.Text;
+
+
+            sql = "UPDATE tblCustomer SET name = @name, idNum = @idNum, gender = @gender, address = @address, mobile = @mobile  WHERE regNum = '"+ textRegNum.Text + "'";
+            con.Open();
+            cmd = new SqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("@name", name);
+            cmd.Parameters.AddWithValue("@idNum", idNum);
+            cmd.Parameters.AddWithValue("@gender", gender);
+            cmd.Parameters.AddWithValue("@address", address);
+            cmd.Parameters.AddWithValue("@mobile", mobile);
+            MessageBox.Show("Record Updated!!!");
+            cmd.ExecuteNonQuery();
+
+            con.Close() ;
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        { 
+            sql = "DELETE FROM tblCustomer WHERE regNum = '" + textRegNum.Text + "'";
+            con.Open();
+            cmd = new SqlCommand(sql, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+            sql = "DELETE FROM tblTeaRecord WHERE regNum = '" + textRegNum.Text + "'";
+            con.Open();
+            cmd = new SqlCommand(sql, con);
+            cmd.ExecuteNonQuery();
+
+            MessageBox.Show("Record Deleted!!!");
+            con.Close();
+
+            textRegNum.Clear();
+            textName.Clear();
+            textID.Clear();
+            textAddress.Clear();
+            textMobile.Clear();
+            textGender.Clear();
+            textArea.Clear();
+            textDate.Clear();
+            dataGridView1.Rows.Clear();
+        }
     }
 }
 

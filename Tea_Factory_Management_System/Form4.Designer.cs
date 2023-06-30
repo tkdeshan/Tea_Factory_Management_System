@@ -34,20 +34,22 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.textRegNum = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textGender = new System.Windows.Forms.TextBox();
-            this.textMobile = new System.Windows.Forms.TextBox();
-            this.textDate = new System.Windows.Forms.TextBox();
-            this.textAddress = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textArea = new System.Windows.Forms.TextBox();
+            this.textAddress = new System.Windows.Forms.TextBox();
+            this.textDate = new System.Windows.Forms.TextBox();
+            this.textMobile = new System.Windows.Forms.TextBox();
+            this.textGender = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnBack = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -96,6 +98,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnDelete);
+            this.groupBox1.Controls.Add(this.btnUpdate);
             this.groupBox1.Controls.Add(this.textArea);
             this.groupBox1.Controls.Add(this.textAddress);
             this.groupBox1.Controls.Add(this.textDate);
@@ -108,36 +112,24 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 52);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(813, 141);
+            this.groupBox1.Size = new System.Drawing.Size(813, 195);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Persoal Details";
             // 
-            // groupBox2
+            // textArea
             // 
-            this.groupBox2.Controls.Add(this.btnBack);
-            this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(12, 215);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(813, 223);
-            this.groupBox2.TabIndex = 9;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Tea Details";
+            this.textArea.Location = new System.Drawing.Point(497, 113);
+            this.textArea.Name = "textArea";
+            this.textArea.Size = new System.Drawing.Size(132, 22);
+            this.textArea.TabIndex = 12;
             // 
-            // textGender
+            // textAddress
             // 
-            this.textGender.Location = new System.Drawing.Point(364, 76);
-            this.textGender.Name = "textGender";
-            this.textGender.Size = new System.Drawing.Size(105, 22);
-            this.textGender.TabIndex = 8;
-            // 
-            // textMobile
-            // 
-            this.textMobile.Location = new System.Drawing.Point(497, 76);
-            this.textMobile.Name = "textMobile";
-            this.textMobile.Size = new System.Drawing.Size(132, 22);
-            this.textMobile.TabIndex = 9;
+            this.textAddress.Location = new System.Drawing.Point(6, 113);
+            this.textAddress.Name = "textAddress";
+            this.textAddress.Size = new System.Drawing.Size(463, 22);
+            this.textAddress.TabIndex = 11;
             // 
             // textDate
             // 
@@ -146,12 +138,41 @@
             this.textDate.Size = new System.Drawing.Size(152, 22);
             this.textDate.TabIndex = 10;
             // 
-            // textAddress
+            // textMobile
             // 
-            this.textAddress.Location = new System.Drawing.Point(6, 113);
-            this.textAddress.Name = "textAddress";
-            this.textAddress.Size = new System.Drawing.Size(463, 22);
-            this.textAddress.TabIndex = 11;
+            this.textMobile.Location = new System.Drawing.Point(497, 76);
+            this.textMobile.Name = "textMobile";
+            this.textMobile.Size = new System.Drawing.Size(132, 22);
+            this.textMobile.TabIndex = 9;
+            // 
+            // textGender
+            // 
+            this.textGender.Location = new System.Drawing.Point(364, 76);
+            this.textGender.Name = "textGender";
+            this.textGender.Size = new System.Drawing.Size(105, 22);
+            this.textGender.TabIndex = 8;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btnBack);
+            this.groupBox2.Controls.Add(this.dataGridView1);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(12, 263);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(813, 175);
+            this.groupBox2.TabIndex = 9;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Tea Details";
+            // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(704, 128);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(87, 30);
+            this.btnBack.TabIndex = 13;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // dataGridView1
             // 
@@ -164,17 +185,10 @@
             this.Column4,
             this.Column5,
             this.Column6});
-            this.dataGridView1.Location = new System.Drawing.Point(16, 34);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 21);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(643, 172);
+            this.dataGridView1.Size = new System.Drawing.Size(643, 137);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // textArea
-            // 
-            this.textArea.Location = new System.Drawing.Point(497, 113);
-            this.textArea.Name = "textArea";
-            this.textArea.Size = new System.Drawing.Size(132, 22);
-            this.textArea.TabIndex = 12;
             // 
             // Column1
             // 
@@ -206,15 +220,25 @@
             this.Column6.HeaderText = "Quantity Balance";
             this.Column6.Name = "Column6";
             // 
-            // btnBack
+            // btnUpdate
             // 
-            this.btnBack.Location = new System.Drawing.Point(705, 176);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(87, 30);
-            this.btnBack.TabIndex = 13;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            this.btnUpdate.Location = new System.Drawing.Point(596, 150);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(87, 30);
+            this.btnUpdate.TabIndex = 13;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(704, 150);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(87, 30);
+            this.btnDelete.TabIndex = 14;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // Form4
             // 
@@ -258,5 +282,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }
