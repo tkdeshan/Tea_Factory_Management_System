@@ -35,7 +35,7 @@ namespace Tea_Factory_Management_System
         {
             try
             {
-                sql = "SELECT * FROM tblCustomer WHERE regNum = '" + textRegNum.Text + "'";
+                sql = "SELECT * FROM tblCustomer WHERE regNum = '" + textReg.Text + "'";
                 con.Open();
                 cmd = new SqlCommand(sql, con);
                 read = cmd.ExecuteReader();
@@ -67,19 +67,19 @@ namespace Tea_Factory_Management_System
 
             int Cut = 0;
             int TransCut = 0;
-            int QtyBalance = 0;
-            int Pay1;
-            int Payment = 0;
+            double QtyBalance = 0;
+            double Pay1;
+            double Payment = 0;
 
-            string Pay = textPay.Text;
+            string Pay = textPayPerKilo.Text;
             Pay1 = int.Parse(Pay);
 
-            string mDate = comboMonth.SelectedItem.ToString();
+            string mDate = comboBox1.SelectedItem.ToString();
             int Month = int.Parse(mDate);
 
             try
             {
-                sql = "SELECT * FROM tblTeaRecord WHERE regNum = '" + textRegNum.Text + "'";
+                sql = "SELECT * FROM tblTeaRecord WHERE regNum = '" + textReg.Text + "'";
                 con.Open();
                 cmd = new SqlCommand(sql, con);
                 read = cmd.ExecuteReader();
