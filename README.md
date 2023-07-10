@@ -1,6 +1,6 @@
 # Tea_Factory_Management_System
 
-This desktop application is designed for a tea factory to help manage customer details and information about tea transactions. It allows users to insert, retrieve, update, and delete data. Additionally, the system is capable of generating monthly tea bills. (C#)
+This desktop application is designed for a tea factory to help manage customer details and information about tea transactions. It allows users to insert, retrieve, update, and delete data. Additionally, the system is capable of generating monthly tea bills. Designed by using C#.
 
 ![1](https://github.com/tkdeshan/Tea_Factory_Management_System/assets/100216231/562e5444-1544-45d8-a138-14a743833332)
 
