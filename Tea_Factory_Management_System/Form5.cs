@@ -21,7 +21,7 @@ namespace Tea_Factory_Management_System
         }
 
 
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-EG4GFB6\\SQLEXPRESS; Initial Catalog=Tea_Factory_Management_System_db; User ID=sa; Password=TkD58630");
+        SqlConnection con = new SqlConnection("Data Source=DESKTOP-UH60G65; Initial Catalog=Tea_Factory_Management_System_db; User ID=sa; Password=TkD58630");
         SqlCommand cmd;
         SqlDataReader read;
         string sql;
